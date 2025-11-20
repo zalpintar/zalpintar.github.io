@@ -11,47 +11,37 @@
             text-align: center;
             padding: 20px;
         }
+
         h1 {
             color: #0077cc;
             margin-bottom: 20px;
         }
+
         p {
             font-size: 1.2em;
             margin-bottom: 10px;
         }
+
+        #smesko {
+            font-size: 3rem;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            animation: premik 4s linear infinite alternate;
+        }
+
+        @keyframes premik {
+            from { left: 0; }
+            to { left: calc(100% - 60px); }
+        }
     </style>
 </head>
 <body>
-    <h1>Naslov lepša stran</h1>
+
     <div id="smesko">😎</div>
 
-<style>
-    #smesko {
-        font-size: 3rem;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        animation: premik 4s linear infinite alternate;
-    }
+    <h1>Naslov lepša stran</h1>
+    <p>Pozdravljeni.</p>
 
-    @keyframes premik {
-        from { left: 0; }
-        to { left: calc(100% - 60px); }
-    }
-</style>
-    <script>
-    window.onload = function() {
-        alert("Pozdravljeni profesor! 🤓");
-        
-        const vprasanje = "Hitro vprašanje za vas profesor:\nKoliko je 2 + 2?";
-        const odgovor = prompt(vprasanje);
-
-        if (odgovor === "4") {
-            alert("Pravilno! 👏 Profesor očitno še vedno obvlada.");
-        } else {
-            alert("Ojoj... 😅 Morda pa čisto malo goljufam s ChatGPT-jem?");
-        }
-    };
-</script>
 </body>
 </html>
